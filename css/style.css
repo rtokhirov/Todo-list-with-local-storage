@@ -1,0 +1,93 @@
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-snap-align: smooth;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg.jpg);
+    backdrop-filter: blur(5px);
+    background-size: cover;
+    backdrop-filter: drop-shadow(4px 4px 50px blue);
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.container {
+    backdrop-filter: blur(3px);
+    max-width: 700px;
+}
+
+.mb-3 {
+    padding-top: 5rem;
+    backdrop-filter: blur(3px);
+}
+
+.mb-3 h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+input {
+    font-size: 2rem !important;
+    border-radius: 10px !important;
+}
+
+.form-text {
+    display: inline-block;
+    padding: 3px 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: yellow;
+    color: red;
+    font-weight: 700;
+    display: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.item {
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2px 10px;
+    background-color: rgba(6, 116, 26, 0.6);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: right;
+}
+
+.item_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: yellow;
+    font-size: 1.6rem;
+    line-height: 1;
+    text-align: left;
+}
+
+.item_div img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.completed {
+    background-color: gray;
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.fade {
+    min-width: 100vh !important;
+    backdrop-filter: blur(2px);
+}

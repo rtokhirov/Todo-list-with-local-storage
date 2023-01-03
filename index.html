@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>To do list</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="mb-3">
+            <form>
+                <h1>Eslatmalar</h1>
+                <label for="exampleInputEmail1" class="form-label"></label>
+                <input placeholder=" Rejalaringizni kiriting ..." type="text" class="form-control" id="input1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Kiritilgan matn 3 ta belgidan ko'p bo'lishi kerak!</div>
+            </form>
+        </div>
+        <div class="wrapper">
+            <!-- <div class="item" id="0">
+                <div class="item_div">
+                    <p>
+                        dqwdqw <br>dwq dwq dqwdqwdqw d dqwdqwqdqw dwd wd qw dqwdqwdqw dwbr
+                        <br>dq wdqwdqdw
+                    </p>
+                    <img onclick="delete(${i})" src="./img/closebtn.svg" alt="">
+                </div>
+                <small>12 : 05 : 15 &nbsp; 02/01/2023</small>
+            </div> -->
+        </div>
+
+    </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-1 text-dark" id="exampleModalLabel">Ogohlantirish!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close "></button>
+                </div>
+                <div class="modal-body text-dark ">
+                    <p>Diqqat! Siz rostdan ham buni o'chirmoqchimisiz?</p>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button" class="btn btn-secondary fs-3" data-bs-dismiss="modal">Orqaga</button>
+                    <button type="button" id="deleting" class="btn btn-primary fs-3" data-bs-dismiss="modal">Xa davom eting</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./bootstrap/bootstrap.bundle.min.js "></script>
+    <script src="./js/app.js "></script>
+</body>
+
+</html>
