@@ -1,6 +1,5 @@
 const form = document.querySelector('form')
 const wrapper = document.querySelector('.wrapper')
-    // let arr = []
 let arr = JSON.parse(localStorage.getItem('list')) ?
     JSON.parse(localStorage.getItem('list')) : [];
 
@@ -33,7 +32,7 @@ function showtodoes() {
         <div ondblclick="setCompleted(${i})" class="item ${item.completed==true?'completed':''}" id="${item.id}">
         <div class="item_div">
             <p>${item.text}</p>
-            <img onclick="tengla(${i})" data-bs-toggle="modal" data-bs-target="#exampleModal" src="./img/closebtn.svg" alt="">
+            <img onclick="tengla(${item.id})" data-bs-toggle="modal" data-bs-target="#exampleModal" src="./img/closebtn.svg" alt="">
         </div>
         <small>${item.time}</small>
     </div>
@@ -41,22 +40,26 @@ function showtodoes() {
     });
 }
 
-function tengla(id) {
-    let j = id
+function tengla(itemId) {
+
     document.querySelector('#deleting').addEventListener('click', () => {
-        deleteItem(j);
-
+        const deletedTodo = arr.filter((item, i) => {
+            return item.id !== itemId
+        })
+        arr = deletedTodo;
+        localWrite();
+        showtodoes();
     })
 }
 
-function deleteItem(id) {
-    const deletedTodo = arr.filter((item, i) => {
-        return i !== id
-    })
-    arr = deletedTodo;
-    localWrite();
-    showtodoes();
-}
+// function deleteItem(son) {
+//     const deletedTodo = arr.filter((item, i) => {
+//         return i !== son
+//     })
+//     arr = deletedTodo;
+//     localWrite();
+//     showtodoes();
+// }
 
 function setCompleted(id) {
     const completedTodo = arr.map((item, i) => {
@@ -70,8 +73,6 @@ function setCompleted(id) {
     localWrite()
     showtodoes()
 }
-
-
 
 
 form.addEventListener('submit', (e) => {
